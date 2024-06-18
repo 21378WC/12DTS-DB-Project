@@ -3,13 +3,14 @@ html {
 }
 
 body {
-    background-color: #000000;
     color: #ffffff;
     font-family: 'Ubuntu', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', 'Verdana', sans-serif;
     width: 75%;
     margin: auto;
     display: grid;
     grid-template-columns: 1fr 4fr;
+    background-image: url("../images/background.png");
+    background-repeat: repeat-y;
 }
 
 header, footer {
@@ -69,3 +70,4 @@ nav ul {
      padding: 5px;
      margin: 5px;
  }
+

@@ -2,15 +2,26 @@
 {% block main %}
         <h2>{{ title }} </h2>
 
-        {% for row in data %}
-            <article>
-                <h3>
-                    {{ row[0] }}
-                </h3>
-                <p>
-                    {{ row[1] }}
-                </p>
-            </article>
-        {% endfor %}
+
+            <table>
+                <tr>
+                    <th> ID </th>
+                    <th> Name </th>
+                    <th> Type </th>
+                    <th> Type2 </th>
+                    <th> Total </th>
+                </tr>
+                {% for row in data %}
+                    <tr>
+                        <td> {{ row[0] }}</td>
+                        <td> {{ row[1] }}</td>
+                        <td> {{ row[2] }}</td>
+                        <td> {{ row[3] }}</td>
+                        <td> {{ row[4] }}</td>
+                    </tr>
+                {% endfor %}
+            </table>
+
+
 
 {% endblock %}

@@ -3,7 +3,8 @@ import sqlite3
 from sqlite3 import Error
 
 app = Flask(__name__)
-DATABASE = "C:/Users/21378/OneDrive - Wellington College/Felix Nichols - 12DTS/Databases Term 2/12DTS DB Assessment/pokemon_db"
+DATABASE = "C:/Users/21378/OneDrive - Wellington College/Felix Nichols - 12DTS/Databases Term 2/12DTS DB Assessment/tags"
+
 
 def create_connection(db_file):
     """
@@ -40,10 +41,10 @@ def render_home():
 @app.route('/tags/<tag_type>')
 def render_webpages(tag_type):
     title = "Pokemon list"
-    query = "SELECT tag, description FROM pokemon_table WHERE type = ?"
+    query = "SELECT * FROM pokemon_table"
     con = create_connection(DATABASE)
     cur = con.cursor()
-    cur.execute(query, (tag_type, ))
+    cur.execute(query)
     tag_list = cur.fetchall()
     print(tag_list)
     con.close()
@@ -53,11 +54,11 @@ def render_webpages(tag_type):
 def render_search():
     search = request.form['search']
     title = "Search for " + search
-    query = "SELECT Name FROM pokemon_db WHERE Name like ?"
+    query = "SELECT Name FROM pokemon_table WHERE Name like ?"
     search = "%" + search + "%"
     con = create_connection(DATABASE)
     cur = con.cursor()
-    cur.execute(query, (search, search))
+    cur.execute(query, (search))
     tag_list = cur.fetchall()
     print(tag_list)
     con.close()
