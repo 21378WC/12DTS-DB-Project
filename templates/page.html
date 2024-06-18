@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block main %}
+        <h2>{{ title }} </h2>
+
+        {% for row in data %}
+            <article>
+                <h3>
+                    {{ row[0] }}
+                </h3>
+                <p>
+                    {{ row[1] }}
+                </p>
+            </article>
+        {% endfor %}
+
+{% endblock %}

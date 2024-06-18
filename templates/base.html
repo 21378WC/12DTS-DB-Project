@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML and CSS Tags</title>
+    <link type="text/css" rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Pokemon</h1>
+    </header>
+    <nav>
+        <ul>
+            <li>
+                <a href="/">Home</a>
+            </li>
+            <li>
+                <a href="/tags/HTML">Pokemon</a>
+            </li>
+            <li>
+                <a href="/tags/CSS">CSS</a>
+            </li>
+        </ul>
+        <form method="POST" action="/search">
+            <input type="text" name="search" id="search">
+            <input type="submit" value="Search">
+        </form>
+
+    </nav>
+    <main>
+        {% block main %}{% endblock %}
+    </main>
+    <footer>
+        <p>&copy; D Benseman 2022</p>
+    </footer>
+</body>
+</html>
