@@ -1,5 +1,8 @@
 html {
     background-color: #111111;
+    background-image: url("../images/pokeball-background.jpg");;
+    background-repeat: repeat-y;
+    background-repeat: repeat-x;
 }
 
 body {
@@ -9,8 +12,6 @@ body {
     margin: auto;
     display: grid;
     grid-template-columns: 1fr 4fr;
-    background-image: url("../images/background.png");
-    background-repeat: repeat-y;
 }
 
 header, footer {

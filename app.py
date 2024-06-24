@@ -38,8 +38,8 @@ def get_types():
 def render_home():
     return render_template("home_page.html")
 
-@app.route('/tags/<tag_type>')
-def render_webpages(tag_type):
+@app.route('/tags')
+def render_pokemon():
     title = "Pokemon list"
     query = "SELECT * FROM pokemon_table"
     con = create_connection(DATABASE)
@@ -48,38 +48,49 @@ def render_webpages(tag_type):
     tag_list = cur.fetchall()
     print(tag_list)
     con.close()
-    return render_template("page.html", data=tag_list, title=title, types=get_types())
+    return render_template("pokemon_list.html", data=tag_list, title=title, types=get_types())
+
+@app.route('/tags/<gen>')
+def render_gen(gen):
+    gen_value = gen
+    title = 'Generation ' + gen_value + ' Pokemon'
+    query = "SELECT * FROM pokemon_table WHERE Generation = ?"
+    con = create_connection(DATABASE)
+    cur = con.cursor()
+    cur.execute(query, (gen_value,))
+    tag_list = cur.fetchall()
+    print(tag_list)
+    con.close()
+    return render_template("pokemon_list.html", data=tag_list, title=title, types=get_types())
+
+@app.route('/<leg>')
+def render_legendary(leg):
+    title = "Legendary Pokemon"
+    query = "SELECT * FROM pokemon_table WHERE Legendary = 1"
+    con = create_connection(DATABASE)
+    cur = con.cursor()
+    cur.execute(query)
+    tag_list = cur.fetchall()
+    print(tag_list)
+    con.close()
+    return render_template("pokemon_list.html", data=tag_list, title=title, types=get_types())
 
 @app.route('/search', methods=['GET', 'POST'])
 def render_search():
     search = request.form['search']
     title = "Search for " + search
-    query = "SELECT Name FROM pokemon_table WHERE Name like ?"
+    query = "SELECT * FROM pokemon_table WHERE Name like ?"
     search = "%" + search + "%"
     con = create_connection(DATABASE)
     cur = con.cursor()
-    cur.execute(query, (search))
+    cur.execute(query, (search,))
     tag_list = cur.fetchall()
     print(tag_list)
     con.close()
-
-    return render_template("page.html", data=tag_list, title=title, types=get_types())
+    return render_template("pokemon_list.html", data=tag_list, title=title, types=get_types())
 
 
 if __name__ == '__main__':
     app.run(debug=True)
-
-#@app.route('/styles')
-#def render_styles():
-#    query = "SELECT tag, description FROM html_tags WHERE type='CSS'"
-#    con = create_connection(DATABASE)
-#    print(con)
-#    cur = con.cursor()
-#    # Query the database
-#    cur.execute(query)
-#    tag_list = cur.fetchall()
-#    con.close()
-#    print(tag_list)
-#    return render_template("page.html", tag=tag_list)
 
 

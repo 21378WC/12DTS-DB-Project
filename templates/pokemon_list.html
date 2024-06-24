@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% block main %}
+        <h2>{{ title }} </h2>
+
+
+            <table>
+                <tr>
+                    <th> ID </th>
+                    <th> Name </th>
+                    <th> Type </th>
+                    <th> Type2 </th>
+                    <th> Total </th>
+                    <th> HP </th>
+                    <th> Attack </th>
+                    <th> Defense </th>
+                    <th> Sp. Attack </th>
+                    <th> Sp. Defense </th>
+                    <th> Speed </th>
+                    <th> Generation </th>
+                    <th> Legendary </th>
+                </tr>
+                {% for row in data %}
+                    <tr>
+                        <td> {{ row[0] }}</td>
+                        <td> {{ row[1] }}</td>
+                        <td> {{ row[2] }}</td>
+                        <td> {{ row[3] }}</td>
+                        <td> {{ row[4] }}</td>
+                        <td> {{ row[5] }}</td>
+                        <td> {{ row[6] }}</td>
+                        <td> {{ row[7] }}</td>
+                        <td> {{ row[8] }}</td>
+                        <td> {{ row[9] }}</td>
+                        <td> {{ row[10] }}</td>
+                        <td> {{ row[11] }}</td>
+                        {% if row[12] == 0 %}
+                            <td> False </td>
+                        {% endif %}
+                        {% if row[12] == 1 %}
+                            <td> True </td>
+                        {% endif %}
+
+                    </tr>
+                {% endfor %}
+            </table>
+
+
+
+{% endblock %}
