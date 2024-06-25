@@ -43,10 +43,10 @@ def render_pokemon():
     title = "Pokemon list"
     query = "SELECT * FROM pokemon_table"
     con = create_connection(DATABASE)
-    cur = con.cursor()
+    with app.app_context():
+        cur = con.cursor()
     cur.execute(query)
     tag_list = cur.fetchall()
-    print(tag_list)
     con.close()
     return render_template("pokemon_list.html", data=tag_list, title=title, types=get_types())
 
@@ -58,10 +58,9 @@ def render_gen(gen):
     con = create_connection(DATABASE)
     cur = con.cursor()
     cur.execute(query, (gen_value,))
-    tag_list = cur.fetchall()
-    print(tag_list)
+    pokemon_list = cur.fetchall()
     con.close()
-    return render_template("pokemon_list.html", data=tag_list, title=title, types=get_types())
+    return render_template("pokemon_list.html", data=pokemon_list, title=title, types=get_types())
 
 @app.route('/<leg>')
 def render_legendary(leg):
@@ -70,10 +69,9 @@ def render_legendary(leg):
     con = create_connection(DATABASE)
     cur = con.cursor()
     cur.execute(query)
-    tag_list = cur.fetchall()
-    print(tag_list)
+    pokemon_list = cur.fetchall()
     con.close()
-    return render_template("pokemon_list.html", data=tag_list, title=title, types=get_types())
+    return render_template("pokemon_list.html", data=pokemon_list, title=title, types=get_types())
 
 @app.route('/search', methods=['GET', 'POST'])
 def render_search():
@@ -85,7 +83,6 @@ def render_search():
     cur = con.cursor()
     cur.execute(query, (search,))
     tag_list = cur.fetchall()
-    print(tag_list)
     con.close()
     return render_template("pokemon_list.html", data=tag_list, title=title, types=get_types())
 

@@ -4,13 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6de3325f-39cf-4856-b0ac-1076c36714a1" name="Changes" comment="Fourth commit, I edited the HTML and the app.py files to fit my table, and now it can display properly.">
+    <list default="true" id="6de3325f-39cf-4856-b0ac-1076c36714a1" name="Changes" comment="Sixth commit, I changed the colours of my website through CSS.">
+      <change beforePath="$PROJECT_DIR$/.idea/12DTS DB Assessment.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/12DTS DB Assessment.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/home_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home_page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/page.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pokemon_list.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +22,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
   <component name="ProjectId" id="2i4NYY7KYkx7HIIkCuSSkxakwbs" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -33,14 +35,17 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;Python.12DTS DB Assessment.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/21378/OneDrive - Wellington College/Felix Nichols - 12DTS/Databases Term 2/12DTS DB Assessment&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/User/OneDrive - Wellington College/Felix Nichols - 12DTS/Databases Term 2/12DTS DB Assessment&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
   &quot;keyToStringList&quot;: {
@@ -67,7 +72,7 @@
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="" />
+      <option name="SDK_HOME" value="C:\Users\User\PycharmProjects\pythonProject\venv\Scripts\python.exe" />
       <option name="WORKING_DIRECTORY" value="" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
@@ -83,6 +88,13 @@
       <method v="2" />
     </configuration>
   </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-5b207ade9991-746f403e7f0c-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-241.17890.14" />
+      </set>
+    </attachedChunks>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -94,7 +106,16 @@
       <workItem from="1718745938936" duration="2988000" />
       <workItem from="1718933387422" duration="3190000" />
       <workItem from="1719191470220" duration="834000" />
-      <workItem from="1719195800586" duration="2694000" />
+      <workItem from="1719195800586" duration="3127000" />
+      <workItem from="1719272120128" duration="3415000" />
+      <workItem from="1719275911334" duration="123000" />
+      <workItem from="1719276051286" duration="54000" />
+      <workItem from="1719276121224" duration="4000" />
+      <workItem from="1719276249330" duration="2198000" />
+      <workItem from="1719278608972" duration="40000" />
+      <workItem from="1719283359960" duration="65000" />
+      <workItem from="1719283754706" duration="1099000" />
+      <workItem from="1719350880105" duration="34000" />
     </task>
     <task id="LOCAL-00001" summary="Fourth commit, I edited the HTML and the app.py files to fit my table, and now it can display properly.">
       <created>1718748932456</created>
@@ -103,7 +124,14 @@
       <option name="project" value="LOCAL" />
       <updated>1718748932456</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Fifth commit, I created &amp; fixed the legendary pokemon page, and I also fixed the search function. I started at making some changes to the CSS with a repeating background.">
+      <created>1719198847631</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1719198847631</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -122,9 +150,18 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Fourth commit, I edited the HTML and the app.py files to fit my table, and now it can display properly." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fourth commit, I edited the HTML and the app.py files to fit my table, and now it can display properly." />
+    <MESSAGE value="Fifth commit, I created &amp; fixed the legendary pokemon page, and I also fixed the search function. I started at making some changes to the CSS with a repeating background." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fifth commit, I created &amp; fixed the legendary pokemon page, and I also fixed the search function. I started at making some changes to the CSS with a repeating background." />
   </component>
-  <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/12DTS_DB_Assessment$12DTS_DB_Assessment.coverage" NAME="12DTS DB Assessment Coverage Results" MODIFIED="1719198505770" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
